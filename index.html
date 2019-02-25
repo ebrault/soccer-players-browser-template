@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Soccer Players</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,57 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Soccer Players</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false" aria-label="toggle-navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item-dropdown" id="sign-up-dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Create Account
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <form class="dropdown-item" id="sign-up-form">
+                  <input required name="credentials[email]" type="email" placeholder="Email"/>
+                  <input required name="credentials[password]" type="password" placeholder="Password"/>
+                  <input required name="credentials[password_confirmation]" type="password" placeholder="Confirm Password"/>
+                  <input type="submit"/>
+                </form>
+              </div>
+            </li>
+            <li class="nav-item-dropdown" id="sign-in-dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Sign In
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <form class="dropdown-item" id="sign-in-form">
+                  <input required name="credentials[email]" type="email" placeholder="Email"/>
+                  <input required name="credentials[password]" type="password" placeholder="Password"/>
+                  <input type="submit"/>
+                </form>
+              </div>
+            </li>
+            <li class="nav-item-dropdown hidden" id="change-password-dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Change Password
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <form class="dropdown-item" id="change-password-form">
+                  <input required name="passwords[old]" type="password" placeholder="Old Password"/>
+                  <input required name="passwords[new]" type="password" placeholder="New Password"/>
+                  <input type="submit"/>
+                </form>
+              </div>
+            </li>
+          </ul>
+          <button class="btn btn-success hidden" id="sign-out-button">Sign Out</button>
+        </div>
+      </nav>
+      <hr />
     </body>
 </html>
