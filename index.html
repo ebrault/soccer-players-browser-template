@@ -66,5 +66,78 @@
         </div>
       </nav>
       <hr />
+      <div id="players-div" class="hidden">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal" data-whatever="create">Add A Player</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateModal" data-whatever="update">Update A Player</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal" data-whatever="delete">Delete A Player</button>
+        <button type="button" class="btn btn-primary" id="index-players-button">Get All Players</button>
+      </div>
+      <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="createModalLabel">Add A Player</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="create-player-form">
+                <input required name="player[name]" type="text" placeholder="Name"/>
+                <input required name="player[number]" type="text" placeholder="Number"/>
+                <input required name="player[position]" type="text" placeholder="Position"/>
+                <input required name="player[team]" type="text" placeholder="Team"/>
+                <input type="submit"/>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="updateModalLabel">Update A Player</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="update-player-form">
+                <input required name="player[id]" type="text" placeholder="ID"/>
+                <input required name="player[name]" type="text" placeholder="Name"/>
+                <input required name="player[number]" type="text" placeholder="Number"/>
+                <input required name="player[position]" type="text" placeholder="Position"/>
+                <input required name="player[team]" type="text" placeholder="Team"/>
+                <input type="submit"/>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="deleteModalLabel">Delete A Player</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="delete-player-form">
+                <input required name="player[id]" type="text" placeholder="ID"/>
+                <input type="submit"/>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 id="players-display-message" class="hidden"></h1>
+      <h1 id="collection-empty-message" class="hidden">Your collection is empty! Please add some players!</h1>
+      <main>
+        <div id="display-players" class="hidden">
+        </div>
+      </main>
     </body>
 </html>

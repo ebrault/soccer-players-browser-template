@@ -7,10 +7,15 @@
 // require('./example')
 
 const userEvents = require('./user/events.js')
+const playerEvents = require('./players/events.js')
 
 $(() => {
   $('#sign-up-form').on('submit', userEvents.onSignUp)
   $('#sign-in-form').on('submit', userEvents.onSignIn)
   $('#change-password-form').on('submit', userEvents.onChangePassword)
   $('#sign-out-button').on('click', userEvents.onSignOut)
+  $('#create-player-form').on('submit', playerEvents.onAddPlayer)
+  $('#index-players-button').on('click', userEvents.onIndexPlayers)
+  $('#update-player-form').on('submit', playerEvents.onUpdatePlayer)
+  $('#delete-player-form').on('submit', playerEvents.onDeletePlayer)
 })
