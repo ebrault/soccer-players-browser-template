@@ -21,6 +21,9 @@ const signInSuccess = function (response) {
   $('#sign-in-dropdown').addClass('hidden')
   $('#change-password-dropdown').removeClass('hidden')
   $('#sign-out-button').removeClass('hidden')
+  $('#players-div').removeClass('hidden')
+  $('#display-players').removeClass('hidden')
+  $('#players-display-message').removeClass('hidden')
 }
 
 const changePasswordSuccess = function () {
@@ -41,6 +44,9 @@ const signOutSuccess = function () {
   $('#sign-in-dropdown').removeClass('hidden')
   $('#change-password-dropdown').addClass('hidden')
   $('#sign-out-button').addClass('hidden')
+  $('#players-div').addClass('hidden')
+  $('#display-players').addClass('hidden')
+  $('#players-display-message').addClass('hidden')
 }
 
 const failure = function () {

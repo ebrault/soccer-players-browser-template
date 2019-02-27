@@ -15,7 +15,7 @@ $(() => {
   $('#change-password-form').on('submit', userEvents.onChangePassword)
   $('#sign-out-button').on('click', userEvents.onSignOut)
   $('#create-player-form').on('submit', playerEvents.onAddPlayer)
-  $('#index-players-button').on('click', userEvents.onIndexPlayers)
+  $('#index-players-button').on('click', playerEvents.onIndexPlayers)
   $('#update-player-form').on('submit', playerEvents.onUpdatePlayer)
   $('#delete-player-form').on('submit', playerEvents.onDeletePlayer)
 })

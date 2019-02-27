@@ -3,8 +3,8 @@
 const addPlayerSuccess = function (data) {
   $('#display-players').html('')
   $('#collection-empty-message').addClass('hidden')
-  $('#player-display-message').html('Add successful')
-  $('#player-display-message').css('color', 'green')
+  $('#players-display-message').html('Add successful')
+  $('#players-display-message').css('color', 'green')
   const player = data.player
   const playerHtml = (`
       <p>ID: ${player.id}</p>
@@ -16,7 +16,7 @@ const addPlayerSuccess = function (data) {
     `)
   $('#display-players').html(playerHtml)
   $('#display-players').css('color', 'green')
-  $('#add-player-form').trigger('reset')
+  $('#create-player-form').trigger('reset')
   $('#update-player-form').trigger('reset')
   $('#delete-player-form').trigger('reset')
   $('#change-password-form').trigger('reset')
@@ -24,10 +24,10 @@ const addPlayerSuccess = function (data) {
 
 const indexPlayersSuccess = function (data) {
   if (data.players.length === 0) {
-    $('#player-display-message').html('')
+    $('#players-display-message').html('')
     $('#collection-empty-message').removeClass('hidden')
   } else {
-    $('#player-display-message').html('')
+    $('#players-display-message').html('')
     $('#display-players').html('')
     data.players.forEach(function (player) {
       const playerHtml = (`
@@ -46,11 +46,11 @@ const indexPlayersSuccess = function (data) {
 
 const updatePlayerSuccess = function (data) {
   $('#collection-empty-message').addClass('hidden')
-  $('#player-display-message').html('')
-  $('#player-display-message').html('Update successful!')
-  $('#player-display-message').css('color', 'green')
+  $('#players-display-message').html('')
+  $('#players-display-message').html('Update successful!')
+  $('#players-display-message').css('color', 'green')
   $('#display-players').html('')
-  $('#add-player-form').trigger('reset')
+  $('#create-player-form').trigger('reset')
   $('#update-player-form').trigger('reset')
   $('#delete-player-form').trigger('reset')
   $('#change-password-form').trigger('reset')
@@ -58,11 +58,11 @@ const updatePlayerSuccess = function (data) {
 
 const deletePlayerSuccess = function (data) {
   $('#collection-empty-message').addClass('hidden')
-  $('#player-display-message').html('')
-  $('#player-display-message').html('Deletion successful!')
-  $('#player-display-message').css('color', 'green')
+  $('#players-display-message').html('')
+  $('#players-display-message').html('Deletion successful!')
+  $('#players-display-message').css('color', 'green')
   $('#display-players').html('')
-  $('#add-player-form').trigger('reset')
+  $('#create-player-form').trigger('reset')
   $('#update-player-form').trigger('reset')
   $('#delete-player-form').trigger('reset')
   $('#change-password-form').trigger('reset')
@@ -70,9 +70,9 @@ const deletePlayerSuccess = function (data) {
 
 const failure = function (data) {
   $('#collection-empty-message').addClass('hidden')
-  $('#player-display-message').html('')
-  $('#player-display-message').html('Something went wrong! Please try again!')
-  $('#player-display-message').css('color', 'red')
+  $('#players-display-message').html('')
+  $('#players-display-message').html('Something went wrong! Please try again!')
+  $('#players-display-message').css('color', 'red')
   $('#display-players').html('')
   $('#add-player-form').trigger('reset')
   $('#update-player-form').trigger('reset')
